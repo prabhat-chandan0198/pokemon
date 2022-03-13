@@ -15,7 +15,6 @@ const pokemonReducer = (state = initialState, action) => {
 				list: [
 					...state.list,
 					{
-						// id:id,
 						data:data
 					}
 				]	
@@ -26,16 +25,8 @@ const pokemonReducer = (state = initialState, action) => {
 				...state,
 				list:deleteList
 			}
-			// return {
-			// 	...state, 
-			// 	list: [
-			// 		state.list.splice(action.index, 1)
-			// 	]
-			// }
 		case EDIT_POKEMON:
 			const { item, index } = action.payload;
-			// console.log(item)
-			// const editItem = state.list.splice(index,1,item);
 			return { 
 				...state, 
 				list: [
@@ -44,18 +35,6 @@ const pokemonReducer = (state = initialState, action) => {
 				  	...state.list.slice(index+1)
 				  ]
 			}
-			// return {
-			// 	...state,
-			// 	list: [
-			// 		...state.list.slice(0,index),
-			// 		item,
-			// 		 ...state.list.slice(index+1),
-			// 		{
-			// 			id:id,
-			// 			data:data
-			// 		}
-			// 	]	
-			// }
 		default:return state
 	}
 }

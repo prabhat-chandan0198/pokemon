@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './Home';
 import FirstScreen from './FirstScreen';
-import Splash from './Splash';
 import Edit from './Edit';
 const Stack = createNativeStackNavigator();
 export default function Navigation() {
